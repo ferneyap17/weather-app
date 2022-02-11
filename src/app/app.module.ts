@@ -9,6 +9,7 @@ import { WeatherCardComponent } from './components/weather-forecast/weather-card
 import { WeatherHightlightsComponent } from './components/weather-hightlights/weather-hightlights.component';
 import { HightlightsCardComponent } from './components/weather-hightlights/hightlights-card/hightlights-card.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterComponent } from './components/footer/footer.component';
     WeatherCardComponent,
     WeatherHightlightsComponent,
     HightlightsCardComponent,
-    FooterComponent
+    FooterComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

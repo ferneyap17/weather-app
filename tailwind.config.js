@@ -12,7 +12,9 @@ module.exports = {
         'gray-2': '#A09FB1',
         'gray-3': '#88869D',
         'gray-4': '#FFFFFF4D',
-        'yellow-1': '#FFEC65'
+        'gray-5': '#616475',
+        'yellow-1': '#FFEC65',
+        'blue-1': '#3C47E9'
       },
       backgroundImage: {
         'cloud-bg': "url(/assets/img/Cloud-background.png)"

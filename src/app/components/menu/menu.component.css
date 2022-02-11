@@ -1,0 +1,7 @@
+input::placeholder {
+  @apply text-gray-5 text-base font-medium
+}
+
+li:hover {
+  @apply border border-gray-4 cursor-pointer
+}
