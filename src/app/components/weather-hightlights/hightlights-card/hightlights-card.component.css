@@ -1,0 +1,7 @@
+progress::-webkit-progress-bar {
+  @apply rounded-[5rem] bg-white-1
+}
+
+progress::-webkit-progress-value {
+  @apply rounded-[5rem] bg-yellow-1
+}
