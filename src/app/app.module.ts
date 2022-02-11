@@ -8,6 +8,7 @@ import { WeatherForecastComponent } from './components/weather-forecast/weather-
 import { WeatherCardComponent } from './components/weather-forecast/weather-card/weather-card.component';
 import { WeatherHightlightsComponent } from './components/weather-hightlights/weather-hightlights.component';
 import { HightlightsCardComponent } from './components/weather-hightlights/hightlights-card/hightlights-card.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HightlightsCardComponent } from './components/weather-hightlights/hight
     WeatherForecastComponent,
     WeatherCardComponent,
     WeatherHightlightsComponent,
-    HightlightsCardComponent
+    HightlightsCardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
