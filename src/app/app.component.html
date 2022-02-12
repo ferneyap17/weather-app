@@ -1,5 +1,9 @@
-<app-menu *ngIf="false"></app-menu>
-<app-weather-today></app-weather-today>
-<app-weather-forecast></app-weather-forecast>
-<app-weather-hightlights></app-weather-hightlights>
-<app-footer></app-footer>
+<div class="lg:grid lg:grid-rows-none lg:grid-flow-col">
+
+  <app-menu *ngIf="false"></app-menu>
+  <app-weather-today class="row-span-4"></app-weather-today>
+  <app-weather-forecast></app-weather-forecast>
+  <app-weather-hightlights></app-weather-hightlights>
+  <app-footer></app-footer>
+
+</div>
