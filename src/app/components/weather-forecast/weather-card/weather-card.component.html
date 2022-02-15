@@ -1,12 +1,19 @@
 <div class="bg-dark-2 text-base h-44 font-medium flex flex-col justify-around items-center">
 
-  <span class=" ">Tomorrow</span>
+  <span>{{weather.applicable_date | date:'ccc, d MMM' }}</span>
 
-  <img src="./assets/img/Shower.png" alt="weather" class="max-h-[3.875rem]">
+  <img 
+    [src]="'./assets/img/'+weather.weather_state_name+'.png'"
+    alt="weather" 
+    class="max-h-[3.875rem]"
+  >
 
   <div class="flex justify-between gap-4">
-    <span>16°C</span>
-    <span class="text-gray-2">11°C</span>
+    <span>{{weather.max_temp | number:'1.0-0'}}°C</span>
+    <span 
+      class="text-gray-2"
+    >{{weather.min_temp | number:'1.0-0'}}°C
+    </span>
   </div>
 
 </div>

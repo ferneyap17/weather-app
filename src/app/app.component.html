@@ -1,9 +1,24 @@
-<div class="lg:grid lg:grid-rows-none lg:grid-flow-col">
+<div
+  *ngIf="!loader; else animationLoader"
+  class="lg:grid lg:grid-flow-col lg:grid-rows-none"
+>
+  <app-weather-today 
+    class="row-span-4"
+    [todayWeather]="weather.consolidated_weather[0]"
+    [city]="weather.title"
+  ></app-weather-today>
+  
+  <app-weather-forecast
+    [weathers]="weather.consolidated_weather"
+  ></app-weather-forecast>
 
-  <app-menu *ngIf="false"></app-menu>
-  <app-weather-today class="row-span-4"></app-weather-today>
-  <app-weather-forecast></app-weather-forecast>
-  <app-weather-hightlights></app-weather-hightlights>
+  <app-weather-hightlights
+    [weather]="weather.consolidated_weather[0]"
+  ></app-weather-hightlights>
+
   <app-footer></app-footer>
-
 </div>
+
+<ng-template #animationLoader>
+  ...cargando
+</ng-template>

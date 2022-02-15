@@ -10,10 +10,9 @@
     p-[3.375rem]"
 >
 
-  <app-weather-card></app-weather-card>
-  <app-weather-card></app-weather-card>
-  <app-weather-card></app-weather-card>
-  <app-weather-card></app-weather-card>
-  <app-weather-card></app-weather-card>
+  <app-weather-card
+    *ngFor="let weather of weathers"
+    [weather]="weather"
+  ></app-weather-card>
 
 </div>

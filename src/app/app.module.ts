@@ -10,6 +10,8 @@ import { WeatherHightlightsComponent } from './components/weather-hightlights/we
 import { HightlightsCardComponent } from './components/weather-hightlights/hightlights-card/hightlights-card.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { MenuComponent } from './components/menu/menu.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

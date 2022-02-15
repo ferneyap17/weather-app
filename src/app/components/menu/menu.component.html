@@ -1,19 +1,31 @@
-<div class="bg-dark-2 p-3">
+<div #menu class="bg-dark-2 p-3 h-screen fixed left-full w-full lg:w-[35%]">
 
   <div class="flex justify-end mb-[1.875rem]">
     <button class="flex items-center">
-      <span class="material-icons">close</span>
+      <span class="material-icons" (click)="toggleMenu()">close</span>
     </button>
   </div>
 
   <div class="flex relative gap-3">
-    <input type="text" placeholder="Search location" class="h-12 w-full bg-dark-2 pl-12 border">
+    <input 
+      type="text" 
+      placeholder="Search location" 
+      class="h-12 w-full bg-dark-2 pl-12 border"
+      [(ngModel)]="cityToSearch"
+      >
     <span class="material-icons absolute top-3 left-3 text-gray-5">search</span>
-    <button class="bg-blue-1 py-3 px-[1.125rem] font-semibold">Search</button>
+    <button 
+      class="bg-blue-1 py-3 px-[1.125rem] font-semibold" 
+      (click)="searchCities(cityToSearch)">Search
+    </button>
   </div>
 
   <ul class="mt-[2.375rem]">
-    <li class="py-[1.375rem] px-3 font-medium">London</li>
+    <li 
+      class="py-[1.375rem] px-3 font-medium"
+      *ngFor="let city of cities"
+      (click)="obtainCityId(city.woeid)"
+    >{{city.title}}</li>
   </ul>
 
 </div>

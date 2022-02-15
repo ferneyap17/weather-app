@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-hightlights-card',
@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hightlights-card.component.css']
 })
 export class HightlightsCardComponent implements OnInit {
+
+  @Input() cardTitle = '';
+  @Input() value!: number;
+  @Input() unity = '';
+  @Input() gps!: boolean;
+  @Input() progress = false;
+  @Input() wind = '';
 
   constructor() { }
 

@@ -1,24 +1,24 @@
 <div class="bg-dark-2 flex flex-col items-center py-6">
 
-  <span class="font-medium text-base">Wind status</span>
+  <span class="font-medium text-base">{{cardTitle}}</span>
 
   <div class="my-2">
-    <span class="font-bold text-[4rem]">7</span>
-    <span class="font-medium text-4xl">mph</span>
+    <span class="font-bold text-[4rem]">{{value | number:'1.0-0'}}</span>
+    <span class="font-medium text-4xl">{{unity}}</span>
   </div>
 
-  <div class="flex items-center gap-2">
+  <div class="flex items-center gap-2" *ngIf="gps">
     <span class="material-icons text-gray-4">explore</span>
-    <span class="font-medium text-sm">WSW</span>
+    <span class="font-medium text-sm">{{wind}}</span>
   </div>
 
-  <div class="w-8/12 text-xs text-gray-2 font-bold">
+  <div class="w-8/12 text-xs text-gray-2 font-bold" *ngIf="progress">
     <div class="flex justify-between">
       <span>0</span>
       <span>50</span>
       <span>100</span>
     </div>
-    <progress max="100" value="70" class="w-full"></progress>
+    <progress max="100" [value]="value" class="w-full"></progress>
     <span class="flex justify-end">%</span>
   </div>
 

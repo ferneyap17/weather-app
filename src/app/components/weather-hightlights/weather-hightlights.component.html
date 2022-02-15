@@ -4,10 +4,32 @@
 
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-8 gap-x-12">
 
-    <app-hightlights-card></app-hightlights-card>
-    <app-hightlights-card></app-hightlights-card>
-    <app-hightlights-card></app-hightlights-card>
-    <app-hightlights-card></app-hightlights-card>
+    <app-hightlights-card
+      cardTitle="Wind status"
+      [value]="weather.wind_speed"
+      unity="mph"
+      [gps]="true"
+      [wind]="weather.wind_direction_compass"
+    ></app-hightlights-card>
+
+    <app-hightlights-card
+      cardTitle="Humidity"
+      [value]="weather.humidity"
+      unity="%"
+      [progress]="true"
+    ></app-hightlights-card>
+
+    <app-hightlights-card
+      cardTitle="Visibility"
+      [value]="weather.visibility"
+      unity="miles"
+    ></app-hightlights-card>
+
+    <app-hightlights-card
+      cardTitle="Air pressure"
+      [value]="weather.air_pressure"
+      unity="mb"
+    ></app-hightlights-card>
 
   </div>
 
