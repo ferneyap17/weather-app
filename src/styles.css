@@ -4,5 +4,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-dark-1 font-raleway text-white-1
+  @apply bg-dark-1 font-raleway text-white-1;
 }

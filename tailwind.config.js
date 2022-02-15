@@ -22,7 +22,24 @@ module.exports = {
     },
     fontFamily: {
       'raleway': ['Raleway', 'sans-serif']
+    },
+    gridTemplateAreas: {
+      'slim': [
+        'header',
+        'content',
+        'footer'
+      ],
+      'wide': [
+        'header content',
+        'header content',
+        'header footer'
+      ]
+    },
+    gridTemplateColumns: {
+      'content': "33.3% 66.6%"
     }
   },
-  plugins: [],
+  plugins: [
+    require('@savvywombat/tailwindcss-grid-areas')
+  ],
 }

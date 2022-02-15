@@ -1,36 +1,30 @@
-<div class="flex flex-col px-5 xl:px-[9.625rem]">
+<h3 class="mb-3 text-2xl font-bold p-5">Today's Hightlights</h3>
 
-  <span class="text-2xl font-bold mb-8">Today's Hightlights</span>
+<div class="grid-card p-5">
+  <app-hightlights-card
+    cardTitle="Wind status"
+    [value]="weather.wind_speed"
+    unity="mph"
+    [gps]="true"
+    [wind]="weather.wind_direction_compass"
+  ></app-hightlights-card>
 
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-8 gap-x-12">
+  <app-hightlights-card
+    cardTitle="Humidity"
+    [value]="weather.humidity"
+    unity="%"
+    [progress]="true"
+  ></app-hightlights-card>
 
-    <app-hightlights-card
-      cardTitle="Wind status"
-      [value]="weather.wind_speed"
-      unity="mph"
-      [gps]="true"
-      [wind]="weather.wind_direction_compass"
-    ></app-hightlights-card>
+  <app-hightlights-card
+    cardTitle="Visibility"
+    [value]="weather.visibility"
+    unity="miles"
+  ></app-hightlights-card>
 
-    <app-hightlights-card
-      cardTitle="Humidity"
-      [value]="weather.humidity"
-      unity="%"
-      [progress]="true"
-    ></app-hightlights-card>
-
-    <app-hightlights-card
-      cardTitle="Visibility"
-      [value]="weather.visibility"
-      unity="miles"
-    ></app-hightlights-card>
-
-    <app-hightlights-card
-      cardTitle="Air pressure"
-      [value]="weather.air_pressure"
-      unity="mb"
-    ></app-hightlights-card>
-
-  </div>
-
+  <app-hightlights-card
+    cardTitle="Air pressure"
+    [value]="weather.air_pressure"
+    unity="mb"
+  ></app-hightlights-card>
 </div>

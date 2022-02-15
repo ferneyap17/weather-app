@@ -1,24 +1,34 @@
-<div
-  *ngIf="!loader; else animationLoader"
-  class="lg:grid lg:grid-flow-col lg:grid-rows-none"
->
-  <app-weather-today 
-    class="row-span-4"
-    [todayWeather]="weather.consolidated_weather[0]"
-    [city]="weather.title"
-  ></app-weather-today>
+<div 
+  *ngIf="!loader; else animationLoader" 
+  class="grid grid-areas-slim lg:grid-areas-wide lg:grid-cols-content">
+
+  <div class="grid-in-header">
+    <app-weather-today
+      [todayWeather]="weather.consolidated_weather[0]"
+      [city]="weather.title"
+    ></app-weather-today>
+  </div>
+
+  <div class="grid-in-content p-12">
+    <app-weather-forecast
+      [weathers]="weather.consolidated_weather"
+    ></app-weather-forecast>
   
-  <app-weather-forecast
-    [weathers]="weather.consolidated_weather"
-  ></app-weather-forecast>
+    <app-weather-hightlights
+      [weather]="weather.consolidated_weather[0]"
+    ></app-weather-hightlights>
+  </div>
 
-  <app-weather-hightlights
-    [weather]="weather.consolidated_weather[0]"
-  ></app-weather-hightlights>
-
-  <app-footer></app-footer>
+  <div class="grid-in-footer">
+    <app-footer></app-footer>
+  </div>
 </div>
 
 <ng-template #animationLoader>
-  ...cargando
+  <div class="flex justify-center items-center h-screen">
+    <div class="spinner">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </div>
+  </div>
 </ng-template>

@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.subscription = this.weatherService.eventSearch.subscribe(res => {
+      this.loader = true;
       this.getWeather(res);
     });
   }

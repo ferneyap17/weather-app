@@ -1,8 +1,8 @@
-<div class="bg-dark-2 flex flex-col items-center py-6">
+<div class="bg-dark-2 flex flex-col items-center py-5 h-full">
 
   <span class="font-medium text-base">{{cardTitle}}</span>
 
-  <div class="my-2">
+  <div class="">
     <span class="font-bold text-[4rem]">{{value | number:'1.0-0'}}</span>
     <span class="font-medium text-4xl">{{unity}}</span>
   </div>
@@ -19,7 +19,6 @@
       <span>100</span>
     </div>
     <progress max="100" [value]="value" class="w-full"></progress>
-    <span class="flex justify-end">%</span>
   </div>
 
 </div>

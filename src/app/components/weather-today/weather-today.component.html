@@ -1,8 +1,9 @@
 <app-menu></app-menu>
 
 <div class="bg-dark-2 bg-cloud-bg h-full bg-[center_top_4rem] bg-no-repeat">
-  <div class="flex justify-between px-3 py-4">
-    <button class="bg-gray-1 px-5 py-2.5" (click)="toggleMenu()">
+
+  <div class="flex justify-between items-center p-5">
+    <button class="bg-gray-1 px-5 py-2.5 rounded" (click)="toggleMenu()">
       Search for places
     </button>
     <button class="material-icons bg-gray-1 h-10 w-10 rounded-full">
@@ -10,29 +11,31 @@
     </button>
   </div>
 
-  <div class="flex flex-col items-center">
+  <div class="flex flex-col items-center gap-12">
+
     <img
-      [src]="'./assets/img/'+todayWeather.weather_state_name+'.png'"
+      [src]="'./assets/img/'+ todayWeather.weather_state_name+'.png'"
       alt="weather-icon"
-      class="my-[3.75rem] max-h-[10.875rem] xl:my-20 xl:max-h-full"
-    />
+      class=""
+    >
     <div>
-      <span 
-        class="text-[9rem] font-medium">{{todayWeather.the_temp | number: '1.0-0'}}</span>
+      <span
+        class="text-[9rem] font-medium">{{todayWeather.the_temp | number: '1.0-0'}}
+      </span>
       <span class="text-gray-2 text-5xl font-light">°C</span>
     </div>
-    <span class="text-gray-2 mb-12 text-4xl font-semibold xl:my-[5.375rem]"
+    <span class="text-gray-2 text-4xl font-semibold"
       >{{todayWeather.weather_state_name}}</span
     >
     <div
-      class="text-gray-3 mb-[2.125rem] flex w-40 justify-between text-lg font-medium"
+      class="text-gray-3 flex w-40 justify-between text-lg font-medium"
     >
       <span>Today</span>
       <span>•</span>
       <span>{{todayWeather.applicable_date | date: 'EE, d MMM'}}</span>
     </div>
     <div
-      class="text-gray-3 mb-[6.625rem] flex items-center text-lg font-semibold"
+      class="text-gray-3 flex items-center text-lg font-semibold"
     >
       <span class="material-icons">place</span>
       <span>{{city}}</span>
