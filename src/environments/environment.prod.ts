@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  url: '<API_PROD>'
+  url: 'https://weather-app-chakler.herokuapp.com/api'
 };
