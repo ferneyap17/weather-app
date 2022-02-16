@@ -35,7 +35,6 @@ export class AppComponent implements OnInit {
       .pipe(
         tap((res) => {
           this.weather = res;
-          console.log(this.weather);
 
           this.loader = false;
         })
