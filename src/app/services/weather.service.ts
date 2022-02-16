@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { City, WeatherResponse } from './interfaces/weather.interface';
-import { environment } from '../../environments/environment';
+import { environment } from '../../environments/environment.prod';
 import { Subject } from 'rxjs';
 
 @Injectable({

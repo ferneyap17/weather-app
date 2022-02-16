@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: 'https://weather-app-chakler.herokuapp.com/api'
+  url: 'http://localhost:3000/api'
 };
 
 /*
